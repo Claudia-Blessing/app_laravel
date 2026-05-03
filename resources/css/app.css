@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-brand-primary: #4f46e5; /* Indigo 600 */
+    --color-brand-secondary: #0ea5e9; /* Sky 500 */
+}
+
+.text-gradient {
+    @apply bg-linear-to-r from-[--color-brand-primary] to-[--color-brand-secondary] bg-clip-text text-transparent;
+}
+
+.card-modern {
+    @apply bg-white rounded-2xl border border-slate-200 shadow-sm shadow-slate-200/50;
+}
