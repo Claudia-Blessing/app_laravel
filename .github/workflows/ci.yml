@@ -53,6 +53,6 @@ jobs:
         run: php artisan --version
 
       - name: php artisan discover
-        run: php artisan discover
+        run: php artisan package:discover
 
       
