@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-composer-
 
       - name: Install Composer dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist
+        run: composer install --no-interaction --no-progress --prefer-dist --no-dev --no-scripts
 
       - name: Prepare Laravel application
         run: |
@@ -51,3 +51,8 @@ jobs:
 
       - name: Laravel CLI check
         run: php artisan --version
+
+      - name: php artisan discover
+        run: php artisan discover
+
+      
